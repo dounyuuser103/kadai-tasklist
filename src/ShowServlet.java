@@ -14,7 +14,7 @@ public class ShowServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Task task = TaskDAO.find(id);
         request.setAttribute("task", task);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/show.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/tasks/show.jsp");
         dispatcher.forward(request, response);
     }
 }

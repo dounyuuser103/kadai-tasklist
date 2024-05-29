@@ -14,7 +14,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Task> tasks = TaskDAO.findAll();
         request.setAttribute("tasks", tasks);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/tasks/index.jsp");
         dispatcher.forward(request, response);
     }
 }

@@ -14,7 +14,7 @@ public class EditServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Task task = TaskDAO.find(id);
         request.setAttribute("task", task);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/tasks/edit.jsp");
         dispatcher.forward(request, response);
     }
 }
